@@ -24,7 +24,10 @@ A complete static mockup of the administrative suite:
 - `login.html`: Secure authentication entry point.
 
 ### Assets & Styling
-- `style.css`: The central design system containing CSS variables, global resets, and component styles.
+- `css/`: Modular CSS architecture for improved maintainability:
+  - `base.css`: Global variables, reset, layout, and animations.
+  - `navbar.css`, `footer.css`, `components.css`: Reusable UI elements.
+  - `cards.css`, `article.css`, `authors.css`, etc.: View-specific styles.
 - `js/`: Interactive logic for theme switching, navigation, and UI states.
 - `assets/`: Images, icons, and media files.
 
