@@ -1,0 +1,7 @@
+/* ==========================================
+   About Page
+   ========================================== */
+.about-page { max-width: 800px; margin: var(--space-2xl) auto; }
+.about-page h1 { font-size: 36px; font-weight: 800; margin-bottom: var(--space-lg); }
+.about-page p { font-size: 16px; color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md); }
+.about-page h2 { font-size: 24px; font-weight: 700; margin: var(--space-xl) 0 var(--space-md); }

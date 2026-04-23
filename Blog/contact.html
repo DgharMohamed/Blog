@@ -1,122 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact AlgoWire | Connect with Us</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .contact-form {
-            background: var(--bg-card);
-            border: 1px solid var(--border-glass);
-            border-radius: 24px;
-            padding: var(--space-md);
-            max-width: 600px;
-            margin: 0 auto;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
-        .form-group {
-            margin-bottom: var(--space-sm);
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 14px;
-            border-radius: 12px;
-            border: 1px solid var(--border-glass);
-            background: rgba(255, 255, 255, 0.05);
-            color: #fff;
-            font-family: inherit;
-            transition: var(--transition);
-        }
-        .form-group input:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            background: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 0 15px var(--primary-glow);
-        }
-    </style>
+    <meta name="description" content="Get in touch with the AlgoWire network.">
+    <title>Contact — AlgoWire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
-    <nav>
-        <div class="container nav-content">
-            <a href="index.html" class="logo">AlgoWire</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-            <a href="contact.html" class="btn btn-primary">Subscribe</a>
+    <!-- Announcement Banner -->
+    <div class="announcement-banner" id="announcementBanner">
+        <div class="container">
+            <span>— Decoding the Future —</span>
         </div>
-    </nav>
+    </div>
 
-    <header class="hero" style="padding-bottom: var(--space-md);">
-        <div class="container fade-in">
-            <span class="hero-tag">Get in touch</span>
-            <h1>Connect with the Network</h1>
-            <p>Have a tip, a question, or a project proposal? We're always listening to the signals.</p>
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__logo">
+                <span class="navbar__logo-icon">&gt;_</span>
+                <span class="navbar__logo-text">Algo<span class="navbar__logo-dot">.</span>Wire</span>
+            </a>
+
+            <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navbar__nav" id="navMenu">
+                <a href="index.html" class="navbar__link">Articles</a>
+                <a href="category.html" class="navbar__link">Categories</a>
+                <a href="authors.html" class="navbar__link">Authors</a>
+                <a href="about.html" class="navbar__link">About</a>
+                <a href="contact.html" class="navbar__link active">Contact</a>
+            </nav>
+
+            <div class="navbar__actions">
+                <button class="navbar__icon-btn" id="searchToggle" aria-label="Search">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                </button>
+                <button class="navbar__icon-btn" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="admin/login.html" class="navbar__admin-btn">Admin</a>
+            </div>
+        </div>
+
+        <!-- Search overlay -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="container">
+                <form action="#" class="search-overlay__form">
+                    <input type="text" name="q" placeholder="Search articles..." class="search-overlay__input" id="searchInput" autocomplete="off">
+                    <button type="submit" class="search-overlay__btn">Search</button>
+                    <button type="button" class="search-overlay__close" id="searchClose">&times;</button>
+                </form>
+            </div>
         </div>
     </header>
 
-    <main class="container">
-        <section class="fade-in">
-            <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent to the network!');">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" placeholder="your@email.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" placeholder="General Inquiry" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" rows="5" placeholder="Your message here..." required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px;">Send Message</button>
-            </form>
-        </section>
+    <main class="main">
+        <div class="container">
+            <section class="contact-section fade-in">
+                <div class="contact-container">
+                    <!-- Left Panel -->
+                    <div class="contact-panel-left">
+                        <div>
+                            <h1>Join the <br>Network.</h1>
+                            <p>Have a technical inquiry, feedback on our algorithms, or looking to collaborate? Reach out to the AlgoWire team.</p>
+                        </div>
+                    </div>
 
-        <section class="fade-in" style="margin-top: var(--space-lg); text-align: center;">
-            <div style="display: flex; justify-content: center; gap: var(--space-md); color: var(--text-muted);">
-                <div>
-                    <h4 style="color: #fff; margin-bottom: 5px;">Email</h4>
-                    <p>hello@algowire.tech</p>
+                    <!-- Right Panel -->
+                    <div class="contact-panel-right">
+                        <h2>Initialize Contact</h2>
+                        
+                        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent to the network!');">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <div class="form-row">
+                                    <input type="text" placeholder="First Name" required>
+                                    <input type="text" placeholder="Last Name" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Sample@gmail.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
                 </div>
-                <div>
-                    <h4 style="color: #fff; margin-bottom: 5px;">Headquarters</h4>
-                    <p>Digital Orbit, L4</p>
-                </div>
-                <div>
-                    <h4 style="color: #fff; margin-bottom: 5px;">Social</h4>
-                    <p>@AlgoWire</p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-logo">
-                <a href="index.html" class="logo" style="font-size: 1.4rem;">AlgoWire</a>
-                <p class="copyright" style="margin-top: 10px;">&copy; 2024 AlgoWire. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <a href="index.html" class="navbar__logo">
+                        <span class="navbar__logo-icon">&gt;_</span>
+                        <span class="navbar__logo-text">Algo<span class="navbar__logo-dot">.</span>Wire</span>
+                    </a>
+                    <p class="footer__tagline">Decoding the Future</p>
+                </div>
+                <div class="footer__links">
+                    <h4 class="footer__heading">Navigation</h4>
+                    <a href="index.html">Articles</a>
+                    <a href="category.html">Categories</a>
+                    <a href="authors.html">Authors</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer__links">
+                    <h4 class="footer__heading">Connect</h4>
+                    <a href="#">GitHub</a>
+                </div>
             </div>
-            <ul class="nav-links" style="display: flex;">
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <div class="footer__bottom">
+                <p>&copy; 2026 AlgoWire. By Mohamed Dghar</p>
+            </div>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
