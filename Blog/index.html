@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Decoding the Future">
+    <title>Home — AlgoWire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Announcement Banner -->
+    <div class="announcement-banner" id="announcementBanner">
+        <div class="container">
+            <span>— Decoding the Future —</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__logo">
+                <span class="navbar__logo-icon">&gt;_</span>
+                <span class="navbar__logo-text">Algo<span class="navbar__logo-dot">.</span>Wire</span>
+            </a>
+
+            <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navbar__nav" id="navMenu">
+                <a href="index.html" class="navbar__link active">Articles</a>
+                <a href="category.html" class="navbar__link">Categories</a>
+                <a href="authors.html" class="navbar__link">Authors</a>
+                <a href="about.html" class="navbar__link">About</a>
+            </nav>
+
+            <div class="navbar__actions">
+                <button class="navbar__icon-btn" id="searchToggle" aria-label="Search">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                </button>
+                <button class="navbar__icon-btn" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="admin/login.html" class="navbar__admin-btn">Admin</a>
+            </div>
+        </div>
+
+        <!-- Search overlay -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="container">
+                <form action="#" class="search-overlay__form">
+                    <input type="text" name="q" placeholder="Search articles..." class="search-overlay__input" id="searchInput" autocomplete="off">
+                    <button type="submit" class="search-overlay__btn">Search</button>
+                    <button type="button" class="search-overlay__close" id="searchClose">&times;</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Featured Articles -->
+            <section class="featured">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Articles</h2>
+                </div>
+
+                <div class="featured__grid">
+                    <!-- Hero Card -->
+                    <article class="card-hero fade-in">
+                        <img src="assets/GENAI---2-1.jpg" alt="The Evolution of Generative Neural Networks" class="card-hero__image" loading="lazy">
+                        <div class="card-hero__overlay"></div>
+                        <div class="card-hero__content">
+                            <div class="tags">
+                                <a href="category.html" class="tag tag--filled">AI</a>
+                                <span class="tag tag--outlined">Featured</span>
+                            </div>
+                            <h3 class="card-hero__title">
+                                <a href="article.html">The Evolution of Generative Neural Networks</a>
+                            </h3>
+                            <p class="card-hero__excerpt">Explore how the latest breakthroughs in transformer architectures are redefining creative boundaries and automated reasoning.</p>
+                            <div class="meta">
+                                <div class="meta__author">
+                                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=MD&backgroundColor=e63946" alt="Mohamed Dghar" class="meta__avatar">
+                                    <span>Mohamed Dghar</span>
+                                </div>
+                                <div class="meta__item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    8 min read
+                                </div>
+                                <div class="meta__item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                    1.2k
+                                </div>
+                                <div class="meta__item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                    12
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Sidebar Featured Cards -->
+                    <div class="featured__sidebar">
+                        <article class="card-side fade-in">
+                            <div class="card-side__image-wrap">
+                                <img src="assets/GITHUB-Banner.png" alt="Quantum Supremacy" class="card-side__image" loading="lazy">
+                                <div class="card-grid__tag">
+                                    <a href="category.html" class="tag tag--filled">Quantum</a>
+                                </div>
+                            </div>
+                            <div class="card-side__content">
+                                <h4 class="card-side__title">
+                                    <a href="article.html">Quantum Supremacy: Beyond the Hype</a>
+                                </h4>
+                                <div class="card-side__meta">
+                                    <span class="meta__item">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                        12 min read
+                                    </span>
+                                    <span class="meta__item">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                        850
+                                    </span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card-side fade-in">
+                            <div class="card-side__image-wrap">
+                                <img src="assets/ml-predictions-2021.jpg" alt="Decentralized Ecosystems" class="card-side__image" loading="lazy">
+                                <div class="card-grid__tag">
+                                    <a href="category.html" class="tag tag--filled">Web3</a>
+                                </div>
+                            </div>
+                            <div class="card-side__content">
+                                <h4 class="card-side__title">
+                                    <a href="article.html">The Blueprint for Decentralized Ecosystems</a>
+                                </h4>
+                                <div class="card-side__meta">
+                                    <span class="meta__item">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                        10 min read
+                                    </span>
+                                    <span class="meta__item">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                        2.4k
+                                    </span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Latest Posts + Sidebar -->
+            <section class="latest-posts">
+                <div class="content-grid">
+                    <div>
+                        <div class="section-header">
+                            <h2 class="section-title">Latest Posts</h2>
+                            <span class="section-count">24 articles</span>
+                        </div>
+
+                        <div class="articles-grid">
+                            <!-- Repeatable Card -->
+                            <article class="card-grid fade-in">
+                                <div class="card-grid__image-wrap">
+                                    <img src="assets/GENAI---2-1.jpg" alt="Post Title" class="card-grid__image" loading="lazy">
+                                    <div class="card-grid__tag">
+                                        <a href="category.html" class="tag tag--filled">Tech</a>
+                                    </div>
+                                </div>
+                                <div class="card-grid__content">
+                                    <h3 class="card-grid__title">
+                                        <a href="article.html">Understanding the modern software architecture</a>
+                                    </h3>
+                                    <p class="card-grid__excerpt">A comprehensive guide to building scalable systems in 2024...</p>
+                                    <div class="card-grid__meta">
+                                        <span class="meta__item">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                            5 min read
+                                        </span>
+                                        <span class="meta__item">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                            1.2k
+                                        </span>
+                                        <span class="meta__item">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                            8
+                                        </span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="card-grid fade-in">
+                                <div class="card-grid__image-wrap">
+                                    <img src="assets/GITHUB-Banner.png" alt="GitHub Workflows" class="card-grid__image" loading="lazy">
+                                    <div class="card-grid__tag">
+                                        <a href="category.html" class="tag tag--filled">DevOps</a>
+                                    </div>
+                                </div>
+                                <div class="card-grid__content">
+                                    <h3 class="card-grid__title">
+                                        <a href="article.html">Automating CI/CD pipelines with GitHub Actions</a>
+                                    </h3>
+                                    <p class="card-grid__excerpt">Learn how to set up robust continuous integration workflows...</p>
+                                    <div class="card-grid__meta">
+                                        <span class="meta__item">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                            7 min read
+                                        </span>
+                                        <span class="meta__item">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                            940
+                                        </span>
+                                        <span class="meta__item">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                            5
+                                        </span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="card-grid fade-in">
+                                <div class="card-grid__image-wrap">
+                                    <img src="assets/ml-predictions-2021.jpg" alt="ML Predictions" class="card-grid__image" loading="lazy">
+                                    <div class="card-grid__tag">
+                                        <a href="category.html" class="tag tag--filled">ML</a>
+                                    </div>
+                                </div>
+                                <div class="card-grid__content">
+                                    <h3 class="card-grid__title">
+                                        <a href="article.html">Predictive models that actually work in production</a>
+                                    </h3>
+                                    <p class="card-grid__excerpt">Bridging the gap between notebook experiments and real-world deployments...</p>
+                                    <div class="card-grid__meta">
+                                        <span class="meta__item">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                            10 min read
+                                        </span>
+                                        <span class="meta__item">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                            2.1k
+                                        </span>
+                                        <span class="meta__item">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                            14
+                                        </span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="card-grid fade-in">
+                                <div class="card-grid__image-wrap">
+                                    <img src="assets/GENAI---2-1.jpg" alt="LLM Fine-tuning" class="card-grid__image" loading="lazy">
+                                    <div class="card-grid__tag">
+                                        <a href="category.html" class="tag tag--filled">AI</a>
+                                    </div>
+                                </div>
+                                <div class="card-grid__content">
+                                    <h3 class="card-grid__title">
+                                        <a href="article.html">Fine-tuning LLMs for domain-specific tasks</a>
+                                    </h3>
+                                    <p class="card-grid__excerpt">A practical guide to adapting large language models for your use case...</p>
+                                    <div class="card-grid__meta">
+                                        <span class="meta__item">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                            15 min read
+                                        </span>
+                                        <span class="meta__item">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                            3.5k
+                                        </span>
+                                        <span class="meta__item">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                            22
+                                        </span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside class="sidebar">
+                        <!-- Search Widget -->
+                        <div class="widget">
+                            <h3 class="widget__title">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                                Search
+                            </h3>
+                            <form action="#" class="search-widget__form">
+                                <input type="text" name="q" placeholder="Search articles..." class="search-widget__input">
+                                <button type="submit" class="search-widget__btn">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Categories Widget -->
+                        <div class="widget">
+                            <h3 class="widget__title">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                                Categories
+                            </h3>
+                            <ul class="categories-list">
+                                <li class="categories-list__item active">
+                                    <a href="index.html">All Posts</a>
+                                    <span class="categories-list__count">24</span>
+                                </li>
+                                <li class="categories-list__item">
+                                    <a href="category.html">Artificial Intelligence</a>
+                                    <span class="categories-list__count">12</span>
+                                </li>
+                                <li class="categories-list__item">
+                                    <a href="category.html">Quantum Computing</a>
+                                    <span class="categories-list__count">5</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <a href="index.html" class="navbar__logo">
+                        <span class="navbar__logo-icon">&gt;_</span>
+                        <span class="navbar__logo-text">Algo<span class="navbar__logo-dot">.</span>Wire</span>
+                    </a>
+                    <p class="footer__tagline">Decoding the Future</p>
+                </div>
+                <div class="footer__links">
+                    <h4 class="footer__heading">Navigation</h4>
+                    <a href="index.html">Articles</a>
+                    <a href="category.html">Categories</a>
+                    <a href="authors.html">Authors</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="footer__links">
+                    <h4 class="footer__heading">Connect</h4>
+                    <a href="#">GitHub</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">RSS Feed</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 AlgoWire. Built with passion for the developer community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
