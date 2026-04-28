@@ -31,6 +31,37 @@
 .login-card__logo { text-align: center; margin-bottom: var(--space-xl); }
 .login-card__title { text-align: center; font-size: 14px; color: var(--text-muted); margin-top: var(--space-sm); font-weight: 400; }
 
+/* Admin Theme Toggle */
+.theme-toggle-floating {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 20;
+}
+
+.navbar__icon-btn {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    box-shadow: 0 8px 18px var(--shadow);
+    transition: all var(--transition-fast);
+}
+
+.navbar__icon-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--border-light);
+    transform: translateY(-1px);
+}
+
+[data-theme="dark"] .icon-moon { display: none; }
+[data-theme="light"] .icon-sun { display: none; }
+
 /* Status badge */
 .status-badge { display: inline-block; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; letter-spacing: 0.5px; text-transform: uppercase; }
 .status-badge--published { background: rgba(46, 204, 113, 0.15); color: #2ecc71; }

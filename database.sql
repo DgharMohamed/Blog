@@ -85,7 +85,7 @@ INSERT INTO authors (name, email, avatar, bio, github) VALUES
 
 -- Admin (password: admin123)
 INSERT INTO admins (username, password_hash) VALUES
-('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');
+('admin', '$2y$12$IZ2F5qgFDwDCsiioGUbodulm4lAdDVYF9vXEaFoqfMQwZrVjYHMxG');
 
 -- Articles
 INSERT INTO articles (title, slug, content, excerpt, cover_image, category_id, author_id, is_featured, views, read_time, status) VALUES
